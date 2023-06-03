@@ -1,12 +1,12 @@
 import React from "react";
 import NavigationBar from "./NavigationBar";
-import Heading from "./Title";
+import Title from "./Title";
 
-const HeaderC = () => {
+const HeaderC = props => {
   return (
     <header>
-      <NavigationBar/>
-      <Heading />
+      <NavigationBar onClick={props.onShowCart}/>
+      <Title />
     </header>
   );
 };

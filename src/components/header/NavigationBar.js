@@ -2,9 +2,9 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import "./NavigationBar.css"
 import HeaderCartButton from "./HeaderCartButton";
 
-const NavigationBar = () => {
+const NavigationBar = props => {
   return (
-    <Navbar>
+    <Navbar fixed="top">
       <Container>
         <Nav className="m-auto">
           <Nav.Link href="#" className="linkText pe-5">
@@ -18,7 +18,7 @@ const NavigationBar = () => {
           </Nav.Link>
         </Nav>
       </Container>
-      <HeaderCartButton />
+      <HeaderCartButton onClick={props.onClick}/>
     </Navbar>
   );
 };
