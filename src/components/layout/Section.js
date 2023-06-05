@@ -1,10 +1,10 @@
 import React from "react";
 import Music from "./Music";
 
-const Section = () => {
+const Section = props => {
     return (
         <React.Fragment>
-            <Music />
+            <Music onClick={props.onShowCart}/>
         </React.Fragment>    
     );
 };

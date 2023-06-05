@@ -1,36 +1,20 @@
+import { useContext } from "react";
 import "./Cart.css";
 import { Button, Col, Row } from "react-bootstrap";
+
 import Modal from "../UI/Modal";
 import CartItem from "./CartItem";
+import CartContext from "../store/CartContext";
 
 const Cart = (props) => {
-  const cartElements = [
-    {
-      id: 1,
-      title: "Album 1",
-      price: 100,
-      imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
-      quantity: 2,
-    },
-    {
-      id: 2,
-      title: "Album 2",
-      price: 50,
-      imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
-      quantity: 3,
-    },
-    {
-      id: 3,
-      title: "Album 3",
-      price: 70,
-      imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
-      quantity: 1,
-    },
-  ];
+  const cartCtx = useContext(CartContext)
 
+  const amount = cartCtx.items.reduce((acc,cur) => {
+    return acc + cur.price*cur.quantity;
+  }, 0);
+
+  const totalAmount = amount.toFixed(2);
+  
   return (
     <Modal>
       <h2>CART</h2>
@@ -52,20 +36,17 @@ const Cart = (props) => {
           <span>QUANTITY</span>
         </Col>
       </Row>
-      {cartElements.map((item) => {
+      {cartCtx.items.map((item) => {
         return (
           <CartItem
             key={item.id}
-            imgUrl={item.imageUrl}
-            title={item.title}
-            price={item.price}
-            quantity={item.quantity}
+            product={item}
           />
         );
       })}
     <div className="d-flex cart-total justify-content-end">
       <h3>Total</h3>
-      <span>$64</span>
+      <span>{`$ ${totalAmount}`}</span>
     </div>
     <Button className="purchase-btn">PURCHASE</Button>  
     </Modal>
