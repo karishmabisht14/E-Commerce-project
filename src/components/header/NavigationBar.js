@@ -1,24 +1,27 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "./NavigationBar.css"
 import HeaderCartButton from "./HeaderCartButton";
+import { NavLink, useLocation } from "react-router-dom";
 
 const NavigationBar = props => {
+  const location = useLocation();
+
   return (
     <Navbar fixed="top">
       <Container>
         <Nav className="m-auto">
-          <Nav.Link href="#" className="linkText pe-5">
+          <NavLink to="/home" className="linkText pe-5">
             HOME
-          </Nav.Link>
-          <Nav.Link href="#" className="linkText pe-5">
+          </NavLink>
+          <NavLink to="/" className="linkText pe-5">
             STORE
-          </Nav.Link>
-          <Nav.Link href="#" className="linkText">
+          </NavLink>
+          <NavLink to="about" className="linkText">
             ABOUT
-          </Nav.Link>
+          </NavLink>
         </Nav>
       </Container>
-      <HeaderCartButton onClick={props.onClick}/>
+      {location.pathname === "/" && <HeaderCartButton onClick={props.onClick}/>}
     </Navbar>
   );
 };
