@@ -1,20 +1,20 @@
 footer {
-    background-color: #56CCF2;
-    padding: 20px 0px;
-    margin-top: 40px;
+  background-color: #56ccf2;
+  padding: 20px 0px;
+  margin-top: 40px;
 }
 
 footer h1 {
-    color: #fff;
-    text-align: center;    
-    font-size: 50px;
-    font-weight: 800; 
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 800;
 }
 
 footer .footer-icons {
-    text-align: center;
-    padding: 18px 150px;
+  text-align: center;
+  padding: 18px 150px;
 }
 .footer-icons img {
-    width: 30px;
+  width: 30px;
 }

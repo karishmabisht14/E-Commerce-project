@@ -3,12 +3,12 @@ import "./CartItem.css";
 import { Button, Col, Row } from "react-bootstrap";
 import CartContext from "../store/CartContext";
 
-const CartItem = ({product}) => {
+const CartItem = ({ product }) => {
   const cartCtx = useContext(CartContext);
 
   const deleteItemToCartHandler = (item) => {
     cartCtx.deleteItem(item);
-  }
+  };
   return (
     <Row className="mb-4">
       <Col md={5} className="d-flex item align-items-center">

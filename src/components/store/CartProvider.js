@@ -18,20 +18,19 @@ const CartProvider = (props) => {
   const deleteItemToCartHandler = (item) => {
     const newItems = [...items];
     const itemIndex = items.findIndex((ele) => ele.id === item.id);
-    if(item.quantity > 1) {
+    if (item.quantity > 1) {
       newItems[itemIndex].quantity--;
-    }
-    else {
-      newItems.splice(itemIndex,1);
+    } else {
+      newItems.splice(itemIndex, 1);
     }
     setItems([...newItems]);
-  }
+  };
 
   const cartContext = {
     items: items,
     totalAmount: 0,
     addItem: addItemToCartHandler,
-    deleteItem: deleteItemToCartHandler
+    deleteItem: deleteItemToCartHandler,
   };
 
   return (

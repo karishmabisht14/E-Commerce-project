@@ -1,8 +1,9 @@
-nav, .linkText{
-    color: #fff !important;
-    padding: 4px 12px !important;
-    background-color: black;
-    font-weight: 500;
-    font-size: 16px;
-    text-decoration: none !important;
+nav,
+.linkText {
+  color: #fff !important;
+  padding: 4px 12px !important;
+  background-color: black;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none !important;
 }

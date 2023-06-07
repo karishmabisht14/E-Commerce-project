@@ -1,9 +1,9 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-import "./NavigationBar.css"
+import "./NavigationBar.css";
 import HeaderCartButton from "./HeaderCartButton";
 import { NavLink, useLocation } from "react-router-dom";
 
-const NavigationBar = props => {
+const NavigationBar = (props) => {
   const location = useLocation();
 
   return (
@@ -21,7 +21,9 @@ const NavigationBar = props => {
           </NavLink>
         </Nav>
       </Container>
-      {location.pathname === "/" && <HeaderCartButton onClick={props.onClick}/>}
+      {location.pathname === "/" && (
+        <HeaderCartButton onClick={props.onClick} />
+      )}
     </Navbar>
   );
 };

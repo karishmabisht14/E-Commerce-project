@@ -1,15 +1,15 @@
 .modal {
-    display: block !important;
-    max-width: 480px !important;
-    position: fixed;
-    overflow: hidden;
-    top: 50px !important;
-    right: 0 !important;
-    margin: 0;
-    left: auto !important;
-    background-color: #fff;
-    border: 1px solid brown;
-    min-height: 50vh;
-    padding: 20px 30px !important;
-    font-family: sans-serif !important;
+  display: block !important;
+  max-width: 480px !important;
+  position: fixed;
+  overflow: hidden;
+  top: 50px !important;
+  right: 0 !important;
+  margin: 0;
+  left: auto !important;
+  background-color: #fff;
+  border: 1px solid brown;
+  min-height: 50vh;
+  padding: 20px 30px !important;
+  font-family: sans-serif !important;
 }

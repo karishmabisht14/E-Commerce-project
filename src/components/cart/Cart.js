@@ -7,14 +7,14 @@ import CartItem from "./CartItem";
 import CartContext from "../store/CartContext";
 
 const Cart = (props) => {
-  const cartCtx = useContext(CartContext)
+  const cartCtx = useContext(CartContext);
 
-  const amount = cartCtx.items.reduce((acc,cur) => {
-    return acc + cur.price*cur.quantity;
+  const amount = cartCtx.items.reduce((acc, cur) => {
+    return acc + cur.price * cur.quantity;
   }, 0);
 
   const totalAmount = amount.toFixed(2);
-  
+
   return (
     <Modal>
       <h2>CART</h2>
@@ -37,18 +37,13 @@ const Cart = (props) => {
         </Col>
       </Row>
       {cartCtx.items.map((item) => {
-        return (
-          <CartItem
-            key={item.id}
-            product={item}
-          />
-        );
+        return <CartItem key={item.id} product={item} />;
       })}
-    <div className="d-flex cart-total justify-content-end">
-      <h3>Total</h3>
-      <span>{`$ ${totalAmount}`}</span>
-    </div>
-    <Button className="purchase-btn">PURCHASE</Button>  
+      <div className="d-flex cart-total justify-content-end">
+        <h3>Total</h3>
+        <span>{`$ ${totalAmount}`}</span>
+      </div>
+      <Button className="purchase-btn">PURCHASE</Button>
     </Modal>
   );
 };
