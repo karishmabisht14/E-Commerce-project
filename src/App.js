@@ -8,6 +8,7 @@ import CartProvider from "./components/store/CartProvider";
 import About from "./components/about/About";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/home/Home";
+import Contact from "./components/contact/Contact";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
@@ -29,6 +30,10 @@ function App() {
           <Route path="about/*" element={<About />} />
           <Route path="/" element={<Section onShowCart={showCartHandler} />} />
           <Route path="home/*" element={<Home />} />
+          <Route
+            path="contact/*"
+            element={<Contact />}
+          />
         </Routes>
         <FooterC />
       </CartProvider>

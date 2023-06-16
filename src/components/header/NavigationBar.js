@@ -16,8 +16,11 @@ const NavigationBar = (props) => {
           <NavLink to="/" className="linkText pe-5">
             STORE
           </NavLink>
-          <NavLink to="about" className="linkText">
+          <NavLink to="about" className="linkText pe-5">
             ABOUT
+          </NavLink>
+          <NavLink to="/contact" className="linkText">
+            CONTACT US
           </NavLink>
         </Nav>
       </Container>
