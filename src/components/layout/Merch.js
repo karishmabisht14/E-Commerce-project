@@ -3,6 +3,7 @@ import "./MusicAlbums.css";
 
 import { useContext } from "react";
 import CartContext from "../store/CartContext";
+import { Link } from "react-router-dom";
 
 const Merch = () => {
   const cartCtx = useContext(CartContext);
@@ -13,20 +14,22 @@ const Merch = () => {
       title: "T-Shirt",
       price: 19.99,
       quantity: 1,
-      imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Shirt.png"
+      review: 5,
+      imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Shirt.png",
     },
     {
       id: 6,
       title: "Coffee Cup",
       price: 6.99,
       quantity: 1,
-      imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Cofee.png"
+      review: 3.5,
+      imageUrl: "https://prasadyash2411.github.io/ecom-website/img/Cofee.png",
     },
   ];
 
   const addToCartHandler = (item) => {
     cartCtx.addItem(item);
-  }
+  };
 
   return (
     <section>
@@ -39,11 +42,25 @@ const Merch = () => {
                 <Card.Body>
                   <h4 className="text-center pb-4">{product.title}</h4>
                   <div className="image-container">
-                    <Card.Img src={product.imageUrl} alt={product.title} />
+                    <Link
+                      to={`/store/product-details/${product.id}`}
+                      state={{
+                        image: product.imageUrl,
+                        price: product.price,
+                        title: product.title,
+                        review: product.review,
+                      }}
+                    >
+                      <Card.Img src={product.imageUrl} alt={product.title} />
+                    </Link>
                   </div>
                   <Card.Text className="mt-3">
                     {`$${product.price}`}{" "}
-                    <Button className="button-wrap" variant="info" onClick={() => addToCartHandler(product)}>
+                    <Button
+                      className="button-wrap"
+                      variant="info"
+                      onClick={() => addToCartHandler(product)}
+                    >
                       ADD TO CART
                     </Button>
                   </Card.Text>

@@ -3,7 +3,7 @@ import MusicAlbums from "./MusicAlbums";
 import Merch from "./Merch";
 import Section2CartButton from "./SectionCartButton";
 
-const Music = props => {
+const Music = (props) => {
   const productsArr = [
     {
       id: 1,
@@ -11,8 +11,9 @@ const Music = props => {
       price: 12.99,
       alt: "Colors",
       quantity: 1,
+      review: 4 ,
       imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%201.png"
+        "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
     },
     {
       id: 2,
@@ -20,9 +21,9 @@ const Music = props => {
       price: 14.99,
       alt: "Black and white Colors",
       quantity: 1,
+      review: 5,
       imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%202.png"
-      
+        "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
     },
     {
       id: 3,
@@ -30,8 +31,9 @@ const Music = props => {
       price: 9.99,
       alt: "Yellow and Black Colors",
       quantity: 1,
+      review: 4.5,
       imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%203.png"
+        "https://prasadyash2411.github.io/ecom-website/img/Album%203.png",
     },
     {
       id: 4,
@@ -39,8 +41,9 @@ const Music = props => {
       price: 19.99,
       alt: "Blue Color",
       quantity: 1,
+      review: 3,
       imageUrl:
-        "https://prasadyash2411.github.io/ecom-website/img/Album%204.png"
+        "https://prasadyash2411.github.io/ecom-website/img/Album%204.png",
     },
   ];
   return (
@@ -53,7 +56,7 @@ const Music = props => {
           })}
         </Row>
         <Merch />
-        <Section2CartButton onClick={props.onClick}/>
+        <Section2CartButton onClick={props.onClick} />
       </Container>
     </section>
   );

@@ -10,7 +10,7 @@ const HeaderCartButton = (props) => {
     return acc + cur.quantity;
   }, 0);
   return (
-    <React.Fragment>
+      <React.Fragment>
       <Button className="button" variant="outline-info" onClick={props.onClick}>
         cart
       </Button>
