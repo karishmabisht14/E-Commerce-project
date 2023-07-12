@@ -1,10 +1,18 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
-import "./NavigationBar.css";
-import HeaderCartButton from "./HeaderCartButton";
+import { useContext } from "react";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink, useLocation } from "react-router-dom";
 
+import "./NavigationBar.css";
+import HeaderCartButton from "./HeaderCartButton";
+import AuthContext from "../store/AuthContext";
+
 const NavigationBar = (props) => {
+  const authCtx = useContext(AuthContext);
   const location = useLocation();
+
+  const logoutHandler = () => {
+    authCtx.logout();
+  };
 
   return (
     <Navbar fixed="top">
@@ -24,6 +32,14 @@ const NavigationBar = (props) => {
           </NavLink>
         </Nav>
       </Container>
+      <NavLink to="/auth" className="linkText mx-3">
+        {!authCtx.isLoggedIn && "Login"}
+      </NavLink>
+      {authCtx.isLoggedIn && (
+        <Button type="button" className="auth-button mx-3" onClick={logoutHandler}>
+          Logout
+        </Button>
+      )}
       {location.pathname === "/store" && (
         <HeaderCartButton onClick={props.onClick} />
       )}

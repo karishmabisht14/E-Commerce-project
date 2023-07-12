@@ -12,3 +12,10 @@ nav,
   padding-bottom: 1px;
   border-bottom: 2px solid #56ccf2;
 }
+
+.auth-button {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  background-color: black !important;
+  border: 2px solid #56ccf2 !important;
+}
