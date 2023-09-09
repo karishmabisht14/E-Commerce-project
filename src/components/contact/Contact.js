@@ -10,7 +10,7 @@ const Contact = () => {
 
   const addUserHandler = async (user) => {
     const response = await fetch(
-      "https://react---ecommerce-default-rtdb.firebaseio.com/users.json",
+      "https://react---ecommerce-default-rtdb.firebaseio.com/contactUsers.json",
       {
         method: "POST",
         body: JSON.stringify(user),

@@ -17,27 +17,24 @@ function App() {
   const [showCart, setShowCart] = useState(false);
 
   const showCartHandler = () => {
+    console.log("cart is open");
     setShowCart(true);
   };
 
   const hideCartHandler = () => {
+    console.log("cart is closed");
     setShowCart(false);
   };
 
   return (
     <React.Fragment>
       {showCart && <Cart onClose={hideCartHandler} />}
-      <HeaderC onShowCart={showCartHandler} />
+      <HeaderC onShowCart={showCartHandler} onClose={hideCartHandler} />
       <Routes>
         <Route path="about/*" element={<About />} />
         <Route
           path="store/*"
-          element={
-            <>
-              {authCtx.isLoggedIn && <Section onShowCart={showCartHandler} />}
-              {!authCtx.isLoggedIn && <Navigate to="/auth" />}
-            </>
-          }
+          element={<Section onShowCart={showCartHandler} />}
         />
         <Route path="store/product-details/:id" element={<ProductDetails />} />
         <Route path="home/*" element={<Home />} />
@@ -46,7 +43,7 @@ function App() {
           element={
             <>
               {authCtx.isLoggedIn && <Contact />}
-              {!authCtx.isLoggedIn && <Navigate to="auth" />}
+              {!authCtx.isLoggedIn && <Navigate to="/auth" />}
             </>
           }
         />

@@ -1,32 +1,42 @@
-.item img {
-  padding-right: 10px;
-}
-.quantity {
-  padding-left: 0px !important;
+.cart-img {
+  width: 80px;
+  border-radius: 8%;
 }
 
-.quantity input {
+span.title {
+  padding-left: 13px;
+}
+.quantity {
+ padding: 0 !important;
+}
+
+.quantity span {
   width: 40px;
-  height: 30px;
-  border: 1px solid rgb(0, 204, 255);
+  height: 26px;
+  border: 1px solid rgb(176, 181, 182);
   border-radius: 8%;
   outline: none;
   text-align: center;
   margin-right: 20px;
 }
 
-.quantity button {
-  color: white;
+.quantityBtns button {
+  color: rgb(0, 204, 255);
   font-weight: bold;
-  background: rgb(231, 76, 76);
   cursor: pointer;
-  border: none;
+  background: none;
+  border: 1px solid rgb(0, 204, 255);
   border-radius: 8%;
-  height: 30px;
+  width: 30px;
+  height: 26px;
   outline: none;
   padding: 0px 7px;
+  margin-right: 10px
 }
-.cart-img {
-  width: 80px;
-  border-radius: 8%;
+
+.quantityBtns button:hover {
+  background: rgb(0, 204, 255);
+  border: rgb(0, 204, 255);
 }
+
+

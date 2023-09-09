@@ -64,9 +64,9 @@
   
   .actions .toggle {
     margin-top: 1rem;
-    background-color: transparent;
-    color: rgb(122, 118, 118);
-    border: none;
+    background-color: transparent !important;
+    color: rgb(122, 118, 118) ;
+    border: none !important;
     padding: 0.15rem 1.5rem;
   }
   

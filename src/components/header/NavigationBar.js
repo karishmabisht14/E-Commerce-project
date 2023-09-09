@@ -18,16 +18,16 @@ const NavigationBar = (props) => {
     <Navbar fixed="top">
       <Container>
         <Nav className="m-auto">
-          <NavLink to="/home" className="linkText mx-3 px-2">
+          <NavLink to="/home" className="linkText mx-3 px-2" onClick={props.onClose}>
             HOME
           </NavLink>
           <NavLink to="/store" className="linkText mx-3 px-2">
             STORE
           </NavLink>
-          <NavLink to="about" className="linkText mx-3 px-2">
+          <NavLink to="about" className="linkText mx-3 px-2" onClick={props.onClose}>
             ABOUT
           </NavLink>
-          <NavLink to="/contact" className="linkText mx-3 px-2">
+          <NavLink to="/contact" className="linkText mx-3 px-2" onClick={props.onClose}>
             CONTACT US
           </NavLink>
         </Nav>

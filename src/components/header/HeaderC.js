@@ -5,7 +5,7 @@ import Title from "./Title";
 const HeaderC = (props) => {
   return (
     <header>
-      <NavigationBar onClick={props.onShowCart} />
+      <NavigationBar onClick={props.onShowCart} onClose={props.onClose}/>
       <Title />
     </header>
   );
