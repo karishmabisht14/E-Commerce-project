@@ -9,3 +9,11 @@ body {
   overflow-y: scroll;
   font-family: "Merriweather", serif !important;
 }
+
+section h1 {
+  font-family: "Metal Mania";
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: 700;
+}

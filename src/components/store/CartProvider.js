@@ -134,7 +134,7 @@ const CartProvider = (props) => {
     });
     if (response.ok) {
       setItems([]);
-      alert("Thank You for the purchase");
+      alert("Thank You for the shopping");
     } else {
       throw new Error("Something went wrong");
     }
